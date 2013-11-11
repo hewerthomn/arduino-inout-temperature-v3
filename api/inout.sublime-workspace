@@ -1,0 +1,523 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cre",
+				"created_at"
+			],
+			[
+				"humi",
+				"in_humidity"
+			],
+			[
+				"Temp",
+				"Temperature"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"drp",
+				"dropdown-toggle"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"bak",
+				"background-color"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"sele",
+				"selectedCity"
+			],
+			[
+				"loca",
+				"localStorage"
+			],
+			[
+				"border-ri",
+				"border-top-right-radius"
+			],
+			[
+				"border-rii",
+				"border-bottom-right-radius"
+			],
+			[
+				"setCe",
+				"setCenterMap"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"back",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "inout.php",
+			"settings":
+			{
+				"buffer_size": 1144,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config.php",
+			"settings":
+			{
+				"buffer_size": 260,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 370.0,
+		"selected_items":
+		[
+			[
+				"ip",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 417.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/everton/sketchbook/InOutTemperature/api/config.php",
+		"/home/everton/sketchbook/InOutTemperatureV3/api/intout.php",
+		"/home/everton/sketchbook/InOutTemperatureV3/api/classes/InOut.class.php",
+		"/home/everton/sketchbook/InOutTemperatureV3/api/config.php",
+		"/home/everton/sketchbook/InOutTemperatureV3/api/classes/Temperature.class.php",
+		"/home/everton/sketchbook/InOutTemperatureV3/api/classes/autoload.php",
+		"/home/everton/sketchbook/InOutTemperatureV3/api/classes/Connection.class.php",
+		"/home/everton/sketchbook/InOutTemperatureV3/intout.php",
+		"/home/everton/Sites/ondebus/public/packages/chosen/chosen-bootstrap.css",
+		"/home/everton/Sites/ondebus/app/views/admin/_layouts/default.blade.php",
+		"/home/everton/Sites/ondebus/app/views/admin/auth/dashboard.blade.php",
+		"/home/everton/Sites/ondebus/public/css/styles.less",
+		"/home/everton/Sites/ondebus/app/views/admin/_layouts/modalRoute.blade.php",
+		"/home/everton/Sites/ondebus/app/controllers/HomeController.php",
+		"/home/everton/Sites/ondebus/public/css/city.css",
+		"/home/everton/Sites/ondebus/app/views/home/city.blade.php",
+		"/media/everton/HEINEKEN/TBBT S07E07.srt",
+		"/etc/xdg/autostart/screensaver.desktop",
+		"/etc/init/xboxdrv.conf",
+		"/home/everton/Sites/ondebus/public/css/animation.css",
+		"/home/everton/Sites/ondebus/app/views/home/index.blade.php",
+		"/home/everton/Sites/ondebus/public/js/home.js",
+		"/home/everton/Sites/ondebus/public/js/city.js",
+		"/home/everton/Sites/ondebus/public/js/admin/dashboard.js",
+		"/home/everton/Backup/Kinghost/ondebus/www/app/webroot/js/app.js",
+		"/home/everton/Sites/ondebus/app/routes.php",
+		"/home/everton/Sites/ondebus/app/models/Point.php",
+		"/home/everton/Sites/ondebus/public/packages/bootstrap/dist/css/bootstrap.css",
+		"/home/everton/Sites/ondebus/public/css/fontbus.css",
+		"/home/everton/Sites/ondebus/public/css/home.css",
+		"/home/everton/Sites/ondebus/app/views/_layouts/site.blade.php",
+		"/etc/apache2/apache2.conf",
+		"/home/everton/sketchbook/libraries/Adafruit_PCD8544/Adafruit_PCD8544.h",
+		"/etc/hosts",
+		"/home/everton/Sites/ondebus/public/packages/bootstrap/_layouts/default.html",
+		"/home/everton/Sites/ondebus/app/controllers/admin/CitiesController.php",
+		"/home/everton/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/everton/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/etc/minidlna.conf",
+		"/home/everton/Backup/Kinghost/ondebus/www/app/webroot/js/city.js",
+		"/etc/init.d/minidlna",
+		"/etc/apt/sources.list",
+		"/home/everton/Sites/ondebus/app/views/city.blade.php",
+		"/home/everton/Sites/ondebus/app/config/database.php",
+		"/home/everton/Sites/ondebus/app/views/admin/city.blade.php",
+		"/home/everton/Sites/ondebus/app/controllers/admin/AdminController.php",
+		"/home/everton/.config/sublime-text-3/Packages/SideBarEnhancements/CHANGELOG"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 94.0,
+		"where_history":
+		[
+			"<open folders>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"hora",
+			"datahora",
+			"temp_externa",
+			"temp_interna",
+			"datahora",
+			"in_",
+			"in_placename",
+			"in_temperature",
+			"temp_interna",
+			"_interna",
+			"_externa",
+			"_interna",
+			"_",
+			"typeahead",
+			"updateNodes",
+			"h3",
+			"line",
+			"h2",
+			"city",
+			"small",
+			"h",
+			"fixMapHeigth",
+			"fixHeight",
+			"fixHei",
+			"fixHeight",
+			"hei",
+			"bindE",
+			"span",
+			"glyphicon glyphicon",
+			"glyphicon",
+			"width",
+			"+ city_id",
+			"city_id",
+			"hogan-2.0.0.js",
+			"fa",
+			"span",
+			"_map",
+			"controls",
+			"map",
+			"x",
+			"alias",
+			"City",
+			"city",
+			"getCity",
+			"city"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "inout.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								382,
+								382
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "config.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 260,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								172,
+								172
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 116.0
+	},
+	"project": "inout.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"less",
+				"public/css/styles.less"
+			],
+			[
+				"admin",
+				"app/controllers/admin/AdminController.php"
+			],
+			[
+				"style",
+				"public/css/styles.less"
+			],
+			[
+				"default",
+				"app/views/admin/_layouts/default.blade.php"
+			],
+			[
+				"dash",
+				"app/views/admin/auth/dashboard.blade.php"
+			],
+			[
+				"dashjs",
+				"public/js/admin/dashboard.js"
+			],
+			[
+				"homec",
+				"app/controllers/HomeController.php"
+			],
+			[
+				"anim",
+				"public/css/animation.css"
+			],
+			[
+				"citycss",
+				"public/css/city.css"
+			],
+			[
+				"city.blad",
+				"app/views/home/city.blade.php"
+			],
+			[
+				"index",
+				"app/views/home/index.blade.php"
+			],
+			[
+				"homejs",
+				"public/js/home.js"
+			],
+			[
+				"cityjs",
+				"public/js/city.js"
+			],
+			[
+				"point",
+				"app/models/Point.php"
+			],
+			[
+				"fontbus",
+				"public/css/fontbus.css"
+			],
+			[
+				"hc",
+				"app/controllers/HomeController.php"
+			],
+			[
+				"home",
+				"app/views/home/index.blade.php"
+			],
+			[
+				"site",
+				"app/views/_layouts/site.blade.php"
+			],
+			[
+				"dasjs",
+				"public/js/admin/dashboard.js"
+			],
+			[
+				"citycs",
+				"public/css/city.css"
+			],
+			[
+				"admin.js",
+				"public/js/admin/dashboard.js"
+			],
+			[
+				"cc",
+				"app/controllers/admin/CitiesController.php"
+			],
+			[
+				"citybphp",
+				"app/views/home/city.blade.php"
+			],
+			[
+				"city",
+				"public/js/city.js"
+			],
+			[
+				"city.balde",
+				"app/views/city.blade.php"
+			],
+			[
+				"routes",
+				"app/routes.php"
+			],
+			[
+				"homecon",
+				"app/controllers/HomeController.php"
+			],
+			[
+				"homeindex",
+				"app/views/home/index.blade.php"
+			],
+			[
+				"homecontr",
+				"app/controllers/HomeController.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
