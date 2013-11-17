@@ -76,28 +76,35 @@ class InOut {
 		return $result;
 	}
 
-	public function getTemperatures($date = null)
+	public function getData($field, $date = null)
 	{
 		$date = ($date == null) ? date('Y-m-d') : $date;
 
 		try
 		{
-			$sql  = "SELECT in_temperature, out_temperature, DATE_FORMAT(created_at, '%H:%i') AS time
+			$in_field  = "in_{$field}";
+			$out_field = "out_{$field}";
+
+
+			$sql  = "SELECT {$in_field}, {$out_field}, DATE_FORMAT(created_at, '%H:%i') AS time
 							 FROM {$this->table}
 							 WHERE DATE(created_at) = :created_at
 							 ORDER BY id";
 
 			$stmt = $this->conn->prepare( $sql );
 			$stmt->bindParam(':created_at', $date, PDO::PARAM_STR);
-
 			if ($stmt->execute())
 			{
 				$logs = $stmt->fetchAll(PDO::FETCH_OBJ);
 			}
 
 			$sqlPlaces  = "SELECT in_placename, out_placename FROM {$this->table} WHERE DATE(created_at) = :created_at LIMIT 1;";
-			$places     = $this->prepare($sql)->fetch(PDO::FETCH_OBJ);
+			$stmtPlaces = $this->conn->prepare($sqlPlaces);
+			$stmtPlaces->bindParam(':created_at', $date, PDO::PARAM_STR);
+			$stmtPlaces->execute();
 
+			$places = $stmtPlaces->fetch(PDO::FETCH_OBJ);
+			
 			$result = array();
 			$result[] = array('Data/Hora', $places->in_placename, $places->out_placename);
 
@@ -105,8 +112,8 @@ class InOut {
 			{
 				$result[] = [
 					$value->time,
-					(int) $value->in_temperature,
-					(int) $value->out_temperature
+					(int) $value->$in_field,
+					(int) $value->$out_field
 				];
 			}
 
@@ -114,78 +121,6 @@ class InOut {
 		}
 		catch (Exception $e)
 		{
-			die( $e->getMessage() );
-		}
-	}
-
-	public function getHumiditys($date = null) {
-		try {
-
-			$date = ($date == null) ? date('Y-m-d') : $date;
-			$sql = "SELECT humidity_interna, humidity_externa, DATE_FORMAT(datahora, '%H:%i') AS hora
-					FROM {$this->table}
-					WHERE DATE(datahora) = :datahora
-					ORDER BY id;";
-
-			$stmt = $this->conn->prepare( $sql );
-			$stmt->bindParam(':datahora', $date);
-
-			if ($stmt->execute()) {
-				$logs = $stmt->fetchAll(PDO::FETCH_OBJ);
-			}
-
-			$result = array();
-			$result[] = array('Data/Hora', 'My Room', 'PVH');
-
-			foreach ($logs as $key => $value) {
-
-				$result[] = array(
-					$value->hora,
-					(int) $value->humidity_interna,
-					(int) $value->humidity_externa
-				);
-			}
-
-			return json_encode($result);
-
-		} catch (Exception $e) {
-
-			die( $e->getMessage() );
-		}
-	}
-
-	public function getDewPoints($date = null) {
-		try {
-
-			$date = ($date == null) ? date('Y-m-d') : $date;
-			$sql = "SELECT dew_point_interna, dew_point_externa, DATE_FORMAT(datahora, '%H:%i') AS hora
-					FROM {$this->table}
-					WHERE DATE(datahora) = :datahora
-					ORDER BY id;";
-
-			$stmt = $this->conn->prepare( $sql );
-			$stmt->bindParam(':datahora', $date);
-
-			if ($stmt->execute()) {
-				$logs = $stmt->fetchAll(PDO::FETCH_OBJ);
-			}
-
-			$result = array();
-			$result[] = array('Data/Hora', 'My Room', 'PVH');
-
-			foreach ($logs as $key => $value) {
-
-				$result[] = array(
-					$value->hora,
-					(int) $value->dew_point_interna,
-					(int) $value->dew_point_externa
-				);
-			}
-
-			return json_encode($result);
-
-		} catch (Exception $e) {
-
 			die( $e->getMessage() );
 		}
 	}
