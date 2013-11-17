@@ -9,7 +9,7 @@ define('API_KEY', 'b790f2291d7428ee');
 setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
 date_default_timezone_set('America/Porto_Velho');
 
-$refresh = 300; // 3 minutes
+$refresh = 120; // 3 minutes
 
 $btns = ['primary', 'success', 'info', 'danger', 'warning'];
 $btnLink = $btns[rand(0, count($btns)-1)];
