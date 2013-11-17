@@ -26,7 +26,7 @@
 #include <SPI.h>
 #include <Ethernet.h>
 
-char InPlacename[] = "@My room";
+char InPlacename[] = "@Duino #1";
 
 // pin 7 - Serial clock out (SCLK)
 // pin 6 - Serial data out (DIN)
@@ -47,7 +47,7 @@ long updateFrequency = 5 * 60000; // 5 minutes
 EthernetClient client;
 byte mac[]    = { 0xDE, 0xAD, 0xBA, 0xEF, 0xFE, 0xBA };
 IPAddress ip(10, 1, 1, 10);
-IPAddress server(10, 1, 1, 6);
+IPAddress server(10, 1, 1, 6);  
 //char server[] = "hewertho.mn";
 
 // variables for content
@@ -67,11 +67,9 @@ void setup()
   lcd.clearDisplay();
   
   printDefaultText();
-  showTemperatures();
-  
-  Ethernet.begin(mac, ip);
 
-  delay(2000);
+  Ethernet.begin(mac, ip);  
+  delay(1000);
 }
 
 void loop()
@@ -139,7 +137,10 @@ void printHeader()
   lcd.print("   ");
   lcd.print(Time);
   lcd.println("");
-  lcd.print("      In   Out"); 
+  lcd.print("      ");
+  lcd.setTextColor(WHITE, BLACK);
+  lcd.print("In   Out");
+  lcd.setTextColor(BLACK);
 }
 
 void printTemperature()
@@ -166,7 +167,7 @@ void printDewPoint()
 {
   double inDewPoint  = dewPoint(DHT11.temperature, DHT11.humidity);
   
-  lcd.print("DP ");
+  lcd.print("PO ");
   if(inDewPoint < 10)
   {
     lcd.setTextColor(WHITE, BLACK);
@@ -185,22 +186,22 @@ void printDewPoint()
 void getOutTemperature()
 {
   lcd.clearDisplay();
-  lcd.println("Connecting....");
+  lcd.println("Conectando...");
   lcd.display();
   
   delay(1000);
 
   if(client.connect(server, 80))
   {
-    lcd.println("Connected.");
+    lcd.println("Conectado!");
     lcd.display();
-    delay(1000);
+    delay(500);
     
     sendRequest(client);
   }
   else
   {
-    lcd.println("Failed.");
+    lcd.println("Falhou.");
     lcd.display();
     delay(1000);
     return;
@@ -247,16 +248,16 @@ void extractData(EthernetClient client)
       dataFlag = true;
       hasStats = true;
       lcd.clearDisplay();
-      lcd.println("Extracting...");
+      lcd.println("Extraindo");
       lcd.display();
     }
     else if(dataFlag && c == '>') // end of data
     {      
       setStatValue(j, currentValue);
       endFlag = true;
-      lcd.println("!");
+      lcd.println("Pronto!");
       lcd.display();
-      delay(2000);
+      delay(1000);
       lcd.clearDisplay();
     }
     else if(dataFlag && c == '|') // next dataset
