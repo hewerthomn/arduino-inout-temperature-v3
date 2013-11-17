@@ -47,7 +47,7 @@ if(isset($_GET['json']))
 						<?php endforeach ?>
 						</select>
 						<div class="input-group-btn">
-							<button type="submit" class="btn btn-sm btn-success"><i class="fa fa-check"></i></button>							
+							<button id="submit" type="submit" class="btn btn-sm btn-success"><i class="fa fa-check"></i></button>							
 						</div>
 					</div>
 				</form>

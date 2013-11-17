@@ -1,6 +1,10 @@
 google.load("visualization", "1", { packages: ["corechart"] });
 google.setOnLoadCallback(drawChart);
 
+$('#date').on('change', function() {
+	$("#submit").trigger('click');
+});
+
 function drawChart(arr)
 {
 	$(document).ready(function()
