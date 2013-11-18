@@ -98,24 +98,31 @@ class InOut {
 				$logs = $stmt->fetchAll(PDO::FETCH_OBJ);
 			}
 
-			$sqlPlaces  = "SELECT in_placename, out_placename FROM {$this->table} WHERE DATE(created_at) = :created_at LIMIT 1;";
+			$sqlPlaces  = "SELECT MIN({$in_field}) AS min_in, MAX({$in_field}) AS max_in, MIN({$out_field}) AS min_out, MAX({$out_field}) AS max_out, in_placename, out_placename 
+										 FROM {$this->table} WHERE DATE(created_at) = :created_at LIMIT 1;";
 			$stmtPlaces = $this->conn->prepare($sqlPlaces);
 			$stmtPlaces->bindParam(':created_at', $date, PDO::PARAM_STR);
 			$stmtPlaces->execute();
 
 			$places = $stmtPlaces->fetch(PDO::FETCH_OBJ);
-			
-			$result = array();
-			$result[] = array('Data/Hora', $places->in_placename, $places->out_placename);
+
+			$data = array();
+			$data[] = array('Data/Hora', $places->in_placename, $places->out_placename);
 
 			foreach ($logs as $key => $value)
 			{
-				$result[] = [
+				$data[] = [
 					$value->time,
 					(int) $value->$in_field,
-					(int) $value->$out_field
+					(int) $value->$out_field					
 				];
 			}
+
+			$result = [
+				'data' => $data,
+				'in'  => ['min' => $places->min_in,  'max' => $places->max_in],
+				'out' => ['min' => $places->min_out, 'max' => $places->max_out]
+			];
 
 			return json_encode($result);
 		}

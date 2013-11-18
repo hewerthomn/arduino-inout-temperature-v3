@@ -42,9 +42,14 @@ function drawChart(arr)
 				json: options.json
 			},
 			dateType: 'json'
-		}).success(function(arr){
+		}).success(function(result){
+
+			console.log('in: ', result.in);
+			console.log('out: ', result.out);
+
+			var minmax = result.data[0]
 			
-			var data  = google.visualization.arrayToDataTable(arr);
+			var data  = google.visualization.arrayToDataTable(result.data);
 			var chart = new google.visualization.LineChart(document.getElementById(options.idChart));
 
 			chart.draw(data, { title: options.title });

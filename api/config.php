@@ -17,7 +17,7 @@ $btnInfo = $btns[rand(0, count($btns)-1)];
 
 $themes = [
 'amelia', 'cerulean', 'cosmo', 'cyborg', 'flatly', 'journal',
-'readable', 'simlex', 'slate', 'spacelab', 'united'
+'readable', 'simplex', 'slate', 'spacelab', 'united'
 ];
 $theme = $themes[rand(0, count($themes)-1)];
 
